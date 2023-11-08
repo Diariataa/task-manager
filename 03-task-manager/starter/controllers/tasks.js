@@ -42,8 +42,6 @@ const updateTask = asyncWrapper(async (req, res) => {
     return res.status(404).json({ msg: `No task with id : ${req.params.id}` });
   }
   res.status(200).json({ task });
-
-  res.status(500).json({ error });
 });
 
 //exports as an object since we're going to add more
